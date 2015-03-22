@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150322172828) do
 
   create_table "category", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug_es"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150322172828) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
+    t.string   "permalink"
     t.text     "content"
     t.integer  "user_id"
     t.integer  "category_id"
