@@ -7,6 +7,7 @@
 
     = csrf_meta_tags
   %body
-    = render :partial => 'application/header'
-    #main_container
-      = yield
+    .container
+      .row
+        = render :partial => 'application/header'
+        = yield
