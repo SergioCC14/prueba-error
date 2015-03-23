@@ -1,9 +1,3 @@
-#main_column
-  .col-xs-12.col-sm-8.col-md-9.col-lg-9{:style => 'border-right: 1px solid #DDDDDD;'}
-    %div{:style => 'padding: 20px 0'}
-      - 3.times do
-        = render :partial => 'posts/partial_show', :locals => {:post => Post.first}
-
-#secundary_column
-  .col-xs-0.col-sm-4.col-md-3.col-lg-3
-    = render :partial => 'application/column_box'
+%div{:style => 'padding: 20px 0'}
+  - 3.times do
+    = render :partial => 'posts/partial_show', :locals => {:post => Post.first}

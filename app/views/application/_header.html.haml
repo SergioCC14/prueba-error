@@ -13,17 +13,16 @@
 
   -#.collapse.navbar-collapse.navbar-ex1-collapse
   %ul.nav.nav-tabs.nav-justified
-    %li.active{:role => "presentation"}
-      = link_to(root_path) do
-        .fa.fa-home
+    %li{:role => "presentation", :class => (@active_nav.blank?) ? 'active' : nil}
+      = link_to("Inicio", root_path)
 
-    %li{:role => "presentation"}
+    %li{:role => "presentation", :class => (!@active_nav.blank? and (@active_nav == 'post_index')) ? 'active' : nil}
       = link_to("Archivo", posts_path)
 
-    %li{:role => "presentation"}
+    %li{:role => "presentation", :class => (!@active_nav.blank? and (@active_nav == 'about')) ? 'active' : nil}
       = link_to("Acerca de", about_path)
 
-    %li{:role => "presentation"}
+    %li{:role => "presentation", :class => (!@active_nav.blank? and (@active_nav == 'contact')) ? 'active' : nil}
       = link_to("Contacto", contact_path)
 
 

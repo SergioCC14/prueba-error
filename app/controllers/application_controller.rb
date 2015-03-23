@@ -6,8 +6,16 @@ class ApplicationController < ActionController::Base
   def index
     # Manera para identificar la página principal del sitio web. Lo uso para SEO.
     @principal_page = true
+    select_nav
 
+  end
 
+ def contact
+    select_nav
+  end
+
+ def about
+    select_nav
   end
 
   # GET /motherbase
@@ -23,6 +31,16 @@ class ApplicationController < ActionController::Base
     else
       redirect_to login_path
     end
+  end
+
+
+  def select_nav
+    @active_nav = case params[:action]
+      when 'about' then 'about'
+      when 'contact' then 'contact'
+    else nil
+    end
+
   end
 
 end
