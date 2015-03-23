@@ -1,0 +1,31 @@
+%header.header
+  - if @principal_page
+    %h1.title-site
+      ="Prueba y Error"
+      -#%small.sub-title="Realiza una prueba, si no funciona intenta otra opción"
+      %small.sub-title="Inténtalo. Equivócate. Vuelve a intentarlo."
+
+  - else
+    .title-site
+      ="Prueba y Error"
+      -#%small.sub-title="Realiza una prueba, si no funciona intenta otra opción"
+      %small.sub-title="Inténtalo. Equivócate. Vuelve a intentarlo."
+
+  -#.collapse.navbar-collapse.navbar-ex1-collapse
+  %ul.nav.nav-tabs.nav-justified
+    %li.active{:role => "presentation"}
+      = link_to(root_path) do
+        .fa.fa-home
+
+    %li{:role => "presentation"}
+      = link_to("Archivo", posts_path)
+
+    %li{:role => "presentation"}
+      = link_to("Acerca de", about_path)
+
+    %li{:role => "presentation"}
+      = link_to("Contacto", contact_path)
+
+
+
+-# h1 el Titulo del blog solo aquí. En posts#index debe ir en h1 el título de los posts
