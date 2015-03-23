@@ -1,0 +1,8 @@
+#container_session
+  = form_for(@session) do |f|
+    %div{:style => 'width: 200px;padding: 10px; margin:auto;'}
+      = text_field_tag :nick, nil, :class => 'default_field', :placeholder => 'Nick', :style => 'width: 100%'
+      = password_field_tag :pass, nil, :class => 'default_field', :placeholder => 'Password', :style => 'width: 100%'
+    = f.submit "", :style => 'display:none' ,:id => 'input_new_session'
+  
+    = link_to("Enter", "", :class => 'btn btn-primary', :onclick => "$('#input_new_session').click()", :remote => true)

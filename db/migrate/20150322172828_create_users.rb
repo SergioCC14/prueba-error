@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :nick
       t.string :remember_token
-      t.string :rank
+      t.integer :rank
       t.string :password
       t.string :password_salt
 
