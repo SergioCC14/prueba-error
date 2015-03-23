@@ -1,0 +1,14 @@
+.secundary_box
+  .box
+    = render :partial => 'application/phrase_box'
+  .box
+    = render :partial => 'posts/post_box' #Falta
+  .box
+    = render :partial => 'application/ad_box' #Falta
+  - if false #ocultos para evitar carga
+    .box
+      = render :partial => 'application/tweets_box'
+    .box
+      = render :partial => 'application/translate_box'
+  .box
+    = render :partial => 'categories/category_box' #Falta

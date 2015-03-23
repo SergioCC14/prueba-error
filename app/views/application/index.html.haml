@@ -1,7 +1,9 @@
 #main_column
-  .col-xs-8.col-sm-8.col-md-8.col-lg-8
-  %div{:style => 'background-color: #F9F9F9; width: 100%;'}
-
+  .col-xs-12.col-sm-8.col-md-9.col-lg-9{:style => 'border-right: 1px solid #DDDDDD;'}
+    %div{:style => 'padding: 20px 0'}
+      - 3.times do
+        = render :partial => 'posts/partial_show', :locals => {:post => Post.first}
 
 #secundary_column
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4
+  .col-xs-0.col-sm-4.col-md-3.col-lg-3
+    = render :partial => 'application/column_box'
