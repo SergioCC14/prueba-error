@@ -1,14 +1,14 @@
 %header.header
   - if @principal_page
     %h1.title-site
-      ="Prueba y Error"
-      -#%small.sub-title="Realiza una prueba, si no funciona intenta otra opción"
+      = link_to(root_path) do
+        ="Prueba y Error"
       %small.sub-title="Inténtalo. Equivócate. Vuelve a intentarlo."
 
   - else
     .title-site
-      ="Prueba y Error"
-      -#%small.sub-title="Realiza una prueba, si no funciona intenta otra opción"
+      = link_to(root_path) do
+        ="Prueba y Error"
       %small.sub-title="Inténtalo. Equivócate. Vuelve a intentarlo."
 
   -#.collapse.navbar-collapse.navbar-ex1-collapse
