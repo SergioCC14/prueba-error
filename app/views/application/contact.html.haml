@@ -4,3 +4,17 @@
   %p="Este es un blog de divulgación personal, pensado para que el autor aprenda y en el trayecto cuente sus experiencias. Por lo tanto todo lo que aquí se expresa es la humilde opinión del autor."
 
   %p="Si deseas ponerte en contacto conmigo puedes utilizar el formulario que aparece en la parte inferior. Toda critica constructiva sera bien recibida."
+
+
+= form_for(Message.new, :html => {:class => 'contact_form'}) do |f|
+  .form-inline
+    .form-group
+      = f.text_field :author, :class => 'form-control', :placeholder => 'Nombre'
+    .form-group
+      = f.text_field :email, :class => 'form-control', :placeholder => 'Email'
+    
+  .form-group
+    = f.text_area :content, :class => 'form-control', :placeholder => 'Escriba aquí el motivo del contacto...'
+
+  .form-group.pull-right
+    = f.submit "Enviar", :class => 'btn btn-primary'
