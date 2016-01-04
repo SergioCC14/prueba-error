@@ -1,0 +1,5 @@
+%div{:style => 'padding: 20px 0'}
+  .post
+    %h1.title-post=@post.title
+    %h2.subtitle-post="Creado por #{@post.user.nick} en #{@post.created_at}"
+    .content-post=raw @post.content

@@ -1,9 +1,17 @@
 .post {
   .title-post {
-    font-size: 20px;
+    font-size: 30px;
   }
-  .subtitle-post {}
+  .subtitle-post {
+    font-size: 16px;
+  }
   .content-post {
     padding: 15px 0px;
+  }
+}
+
+.post.preview {
+  .title-post {
+    font-size: 20px;
   }
 }

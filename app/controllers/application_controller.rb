@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
     @principal_page = true
     select_nav
 
+    @posts = Post.page(params[:page].to_i).per(10)
+
   end
 
  def contact

@@ -35,5 +35,7 @@ end
 # Haml
 gem "haml-rails"
 
+gem 'kaminari'
+
 # Paperclip
 # gem "paperclip", "~> 3.0"

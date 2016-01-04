@@ -9,11 +9,16 @@ Rails.application.routes.draw do
   get '/contact', :to => 'application#contact', :as => 'contact'
   get '/motherbase', :to => 'application#motherbase', :as => 'motherbase'
 
+  resources :posts
+  resources :categories
+  resources :sessions
+  resources :messages
+
   # Post paths
-  get '/:categoria/:permalink', :to => 'posts#show', :as => 'permalink_post'
+  get '/:category/:permalink', :to => 'posts#permalink_show', :as => 'permalink_post'
 
   # Category paths
-  get '/categoria/:permalink', :to => 'category#show', :as => 'categoria_show'
+  get '/category/:permalink', :to => 'category#category_show', :as => 'permalink_category'
   # get '/category/', :to => 'category#index', :as => 'categoria_home'
 
   resources :users do
@@ -21,10 +26,5 @@ Rails.application.routes.draw do
       
     end
   end
-
-  resources :posts
-  resources :categories
-  resources :sessions
-  resources :messages
 
 end

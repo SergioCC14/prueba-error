@@ -1,8 +1,8 @@
-.post
+.post.preview
   .title-post=post.title
   .subtitle-post="Creado por #{post.user.nick} en #{post.created_at}"
-  .content-post=raw(post.content.truncate(800))
+  .content-post=raw(post.content.truncate(800)) if !post.content.blank?
   %div{:style => 'margin-bottom:10px;'}
-  - if post.content.length > 800
+  - if !post.content.blank? && post.content.length > 800
     = link_to " >> Seguir leyendo", post
     %hr
