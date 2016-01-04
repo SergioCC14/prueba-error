@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   # GET /motherbase
   # Panel de control
   def motherbase
-    if (signed_in?) and (current_user.admin?)
+    if signed_in? and current_user.admin?
     
       respond_to do |format|
         format.html { render }

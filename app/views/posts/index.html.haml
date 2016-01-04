@@ -1,1 +1,5 @@
-=@posts
+%dl
+  - @posts.each do |date, post|
+    %dt="#{show_date date}"
+    - post.each do |p|
+      %dd= p.title
